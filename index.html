@@ -1,0 +1,188 @@
+<!-- HTML structure for the xHares NFT Collection Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xHares NFT Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 fixed top-0 w-full z-50">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="flex items-center space-x-2">
+                <img src="./public/logo.png" alt="Logo Icon" class="w-6 h-6">
+                <div class="border-l-2 border-gray-300 h-6 ml-2"></div>
+                <div class="text-xl font-bold">xHares</div>
+            </div>
+            <div class="block md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div id="menu" class="hidden bg-white shadow-lg rounded-lg mt-2 py-2 absolute right-0 w-48">
+                    <a href="#xSpectarverse" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">xSpectarverse</a>
+                    <a href="#whitepaper" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Whitepaper</a>
+                    <a href="#roadmap" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Roadmap</a>
+                    <a href="#minting" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Minting</a>
+                </div>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#xspectarverse" class="hover:text-indigo-500">xSpectarverse</a></li>
+                <li><a href="#whitepaper" class="hover:text-indigo-500">Whitepaper</a></li>
+                <li><a href="#roadmap" class="hover:text-indigo-500">Roadmap</a></li>
+                <li><a href="#minting" class="hover:text-indigo-500">Minting</a></li>
+            </ul>
+        </nav>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <div class="h-20"></div>
+    
+    <!-- Minting Section -->
+    <section id="minting" class="bg-white p-8 mt-6 max-w-7xl mx-auto rounded-lg shadow-md text-center">
+        <h2 class="text-3xl font-bold mb-4">Mint up to 50 NFTs of a 10,000 collection with 200+ traits</h2>
+        <div class="w-120 h-160 bg-black text-white flex flex-col items-center p-4 rounded-lg shadow-md mx-auto mt-8">
+            <div class="w-full h-full flex items-center justify-center mb-4">
+                <img src="./public/minting-card-giff.gif" alt="NFT Preview" style="width: 450px; height: 450px;">
+            </div>
+            <a target="_blank" rel="noopener noreferrer" href="https://xrp.cafe/collection/xhares" class="bg-white text-black py-8 px-20 mt-auto rounded-lg font-extrabold text-3xl">BUY</a>
+        </div>
+    </section>
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="bg-white p-8 mt-6 max-w-7xl mx-auto rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold mb-4">Roadmap</h2>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">Phase 1: November 3rd, 2024</h3>
+            <ul class="list-disc ml-6">
+                <li>Official launch of the collection of 10,000 hare NFTs.</li>
+                <li>Promotion through social media.</li>
+                <li>Partnerships with influencers and communities to maximize reach.</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">Phase 2: November 4th, 2024</h3>
+            <ul class="list-disc ml-6">
+                <li>Launch of the official collection website.</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">Phase 3: January 2025</h3>
+            <ul class="list-disc ml-6">
+                <li>Start of the minting of fungible tokens corresponding to the items included in the NFT metadata.</li>
+                <li>Launch of the rewards program for NFT holders.</li>
+                <li>Creation of community guide on how to utilize fungible tokens.</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">Phase 4: To be determined in 2025</h3>
+            <ul class="list-disc ml-6">
+                <li>Introduction of minting for properties within the xSpectarverse.</li>
+                <li>Implementation of features for buying, selling, and renting digital properties.</li>
+                <li>Marketing campaigns and events to promote the new functionality.</li>
+            </ul>
+        </div>
+        <div class="bg-black text-white p-6 rounded-lg shadow-md mt-8">
+            <h3 class="text-2xl font-semibold">Phase 5: Extra Phase | November 5th</h3>
+            <p class="mt-4">
+                A more perfect stage could not be asked for...<br>
+                Your powers of observation continue to serve you well.<br>
+                But wait... it&#39;s to Madame Justice that I dedicate this concerto<br>
+                In honor of the holidays she seems to have taken from this parts<br>
+                And in recognition of the impostor that stand in her stead.<br>
+            </p>
+            <p class="mt-4 font-bold">20% of the sales to date will be converted into ATM (All The Money) and BURNED</p>
+        </div>
+    </section>
+
+    <!-- Whitepaper Section -->
+    <section id="whitepaper" class="bg-white p-8 mt-6 max-w-7xl mx-auto rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold mb-4">Whitepaper</h2>
+        <p class="italic text-gray-600 mb-6">(Might go through changes)</p>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">Abstract</h3>
+            <p>The xHares collection is a unique set of 10,000 humanoid bunnies NFTs designed to create a vibrant and inclusive metaverse. This whitepaper outlines the vision, utility, and roadmap of the project, emphasizing our mission to unite the newly born XRPL meme community, the art community, the crypto asset speculation community, and the crypto gaming community.</p>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">1. Introduction</h3>
+            <p>The xHares NFT collection aims to foster a dynamic environment where holders and owners of fungible tokens can interact, explore, and engage with their NFTs in meaningful ways. Each bunny NFT is not just a collectible; it represents a character with unique traits and abilities that can evolve over time. Our goal is to create a space that bridges diverse communities, encouraging collaboration and creativity.</p>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">2. Collection Overview</h3>
+            <ul class="list-disc ml-6">
+                <li>Total Supply: 10,000 NFTs.</li>
+                <li>Unique Traits: Each bunny features distinctive attributes, from colors and outfits to accessories, reflecting diverse personality.</li>
+                <li>Metadata: Ready to receive the fungible tokens.</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">3. Utility</h3>
+            <p>Holders of xHares will enjoy:</p>
+            <ul class="list-disc ml-6">
+                <li>Access to exclusive events and experiences in the metaverse.</li>
+                <li>The ability to mint fungible tokens related to their NFTs.</li>
+                <li>Participation in community-driven initiatives and governance.</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">4. Choice of Blockchain</h3>
+            <p>We chose to launch on XRPL for several key reasons:</p>
+            <ul class="list-disc ml-6">
+                <li>Carbon Neutral: XRPL is environmentally friendly, aligning with our commitment to sustainability.</li>
+                <li>Retail Consumer Base: The XRPL has a vast number of retail consumers, providing a ready market for our NFTs.</li>
+                <li>Proven Track Record: With a rich history and dedicated developers, the XRPL has consistently introduced features, resources, and tutorials that promote decentralization and education in the crypto space. This deserves recognition and visibility, as it contributes to a more informed community and a robust ecosystem.</li>
+            </ul>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">5. Roadmap</h3>
+            <p>A detailed timeline outlining the project’s phases, including the launch, website implementation, minting of fungible tokens, and real estate integration within the xSpectar metaverse (might include other metaverses later).</p>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">6. Community Engagement</h3>
+            <p>Building a strong community is essential for the success of xHares. We will implement strategies for active participation, feedback, and collaboration among holders, ensuring that all voices are heard.</p>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold">7. Conclusion</h3>
+            <p>The xHares collection offers a unique opportunity to engage with a thriving metaverse ecosystem. We invite you to join us on this exciting journey and be part of a movement that unites diverse communities while honoring the innovative spirit of the XRPL!</p>
+        </div>
+    </section>
+
+    <!-- XSpectarVerse Section -->
+    <section id="xspectarverse" class="bg-white p-8 mt-6 max-w-7xl mx-auto rounded-lg shadow-md text-center">
+        <h2 class="text-3xl font-bold mb-4">XSpectarVerse</h2>
+        <p class="text-lg">A vibrant metaverse where xHares NFT holders can explore, interact, and create. To read more visit <a href="https://xspectar.com">Oficial Website</a></p>
+
+        <h1>XSpectar Verse</h1>
+        <p>Know more watching the video bellow or <a href="https://xspectar.com" target="_blank" rel="noreferrer">click here</a></p>
+        <div class="flex justify-center mt-6 w-full">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-pO4-v59gNk?si=sXMP1pnVoRumYGFn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> 
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-white shadow-inner p-4 mt-12 text-center">
+        <div class="flex items-center justify-center space-x-2">
+            <a href="https://twitter.com/flr_shaka" target="_blank" rel="noopener noreferrer">
+                <img src="./public/x-logo.png" alt="Twitter Logo" class="w-6 h-6">
+            </a>
+            <div class="border-l-2 border-gray-300 h-6 ml-2"></div>
+            <p class="text-sm">made by @flr_shaka</p>
+        </div>
+    </footer>
+</body>
+</html>
