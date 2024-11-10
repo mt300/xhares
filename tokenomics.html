@@ -1,0 +1,153 @@
+<!-- HTML structure for the xHares NFT Collection Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xHares NFT Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0-beta.5/umd/material.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0-beta.5/umd/material.min.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 fixed top-0 w-full z-50">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="flex items-center space-x-2">
+                <img src="./public/logo.png" alt="Logo Icon" class="w-6 h-6">
+                <div class="border-l-2 border-gray-300 h-6 ml-2"></div>
+                <div class="text-xl font-bold">xHares</div>
+            </div>
+            <div class="block md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div id="menu" class="hidden bg-white shadow-lg rounded-lg mt-2 py-2 absolute right-0 w-48">
+                    <a href="./tokenomics.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Tokenomics</a>
+                    <a href="./xspectar.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">xSpectarverse</a>
+                    <a href="./governance.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Governance</a>
+                    <a href="./whitepaper.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Whitepaper</a>
+                    <a href="./roadmap.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Roadmap</a>
+                    <a href="./index.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Minting</a>
+                </div>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./tokenomics.html" class="hover:text-indigo-500">Tokenomics</a></li>
+                <li><a href="./xspectar.html" class="hover:text-indigo-500">xSpectarverse</a></li>
+                <li><a href="./governance.html" class="hover:text-indigo-500">Governance</a></li>
+                <li><a href="./whitepaper.html" class="hover:text-indigo-500">Whitepaper</a></li>
+                <li><a href="./roadmap.html" class="hover:text-indigo-500">Roadmap</a></li>
+                <li><a href="./index.html" class="hover:text-indigo-500">Minting</a></li>
+            </ul>
+        </nav>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <div class="h-20"></div>
+    
+    <!-- Minting Section -->
+    <section id="tokenomics" class="bg-white p-8 mt-6 max-w-7xl mx-auto rounded-lg shadow-md text-center h-100" style="overflow:visible;">
+        <h2 class="text-3xl font-bold mb-4 " >Tokenomics</h2>
+        <!-- <div class="w-120 h-160 bg-black text-white flex flex-col items-center p-4 rounded-lg shadow-md mx-auto mt-8"> -->
+            <div class="p-5" style="overflow: visible;">
+
+                <div style="width: 45%; max-width: 600px; overflow:visible; padding: 20px;">
+                    <canvas class="" style=" overflow: visible;" id="myPieChart"></canvas>
+                </div>
+            </div>
+            <script>
+                // Creating the pie chart using Chart.js
+                document.addEventListener('DOMContentLoaded', function () {
+                    const ctx = document.getElementById('myPieChart').getContext('2d');
+                    const data = {
+                        labels: ['Red', 'Blue', 'Yellow','hdsua','hdsua','hdsua','hdsua'],
+                        datasets: [{
+                            label: '% of Tokens',
+                            data: [45, 30, 25,90,20,30,20],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.8)',
+                                'rgba(54, 162, 235, 0.8)',
+                                'rgba(255, 206, 86, 0.8)',
+                                'rgba(50, 162, 235, 0.8)',
+                                'rgba(255, 206, 86, 0.8)',
+                                'rgba(54, 162, 235, 0.8)',
+                                'rgba(255, 206, 86, 0.8)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    };
+        
+                    const config = {
+                        type: 'pie',
+                        data: data,
+                        options: {
+                            responsive: true,
+                            layout: {
+                                padding: {
+                                    top: 20,
+                                    bottom: 20,
+                                    left: 20,
+                                    right: 20
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    position: 'bottom',
+                                },
+                            },
+                            hoverOffset: 10, // Increase size on hover
+                            animation: {
+                                duration: 1000,
+                                easing: 'easeInOutQuad'
+                            },
+                            elements: {
+                                arc: {
+                                    borderAlign: 'inner', // Alinha a borda para o centro, preenchendo o espaço ao redor
+                                    borderWidth: 20 // Define a espessura das bordas
+                                }
+                            }
+                        }
+                    };
+        
+                    new Chart(ctx, config);
+                });
+            </script>
+        <!-- </div> -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white shadow-inner p-4 mt-12 text-center">
+        <div class="flex items-center justify-center space-x-2">
+            <a href="https://twitter.com/x_hares" target="_blank" rel="noopener noreferrer">
+                <img src="./public/x-logo.png" alt="Twitter Logo" class="w-6 h-6">
+            </a>
+            <div class="border-l-2 border-gray-300 h-6 ml-2"></div>
+            <p class="text-sm">made by <a href="https://twitter.com/flr_shaka" target="_blank" rel="noopener noreferrer">@flr_shaka</a></p>
+        </div>
+    </footer>
+</body>
+</html>

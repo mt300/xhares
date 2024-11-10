@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xHares NFT Collection</title>
+    <link href="./styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
     <style>
@@ -18,9 +19,13 @@
     <header class="bg-white shadow-md p-4 fixed top-0 w-full z-50">
         <nav class="flex justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center space-x-2">
-                <img src="./public/logo.png" alt="Logo Icon" class="w-6 h-6">
+                <a href="/">
+                    <img src="./public/logo.png" alt="Logo Icon" class="w-6 h-6">
+                </a>
                 <div class="border-l-2 border-gray-300 h-6 ml-2"></div>
-                <div class="text-xl font-bold">xHares</div>
+                <a href="/">
+                    <div class="text-xl font-bold">xHares</div>
+                </a>
             </div>
             <div class="block md:hidden">
                 <button id="menu-toggle" class="focus:outline-none">
@@ -29,6 +34,7 @@
                     </svg>
                 </button>
                 <div id="menu" class="hidden bg-white shadow-lg rounded-lg mt-2 py-2 absolute right-0 w-48">
+                    <a href="./tokenomics.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Tokenomics</a>
                     <a href="./xspectar.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">xSpectarverse</a>
                     <a href="./governance.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Governance</a>
                     <a href="./whitepaper.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Whitepaper</a>
@@ -37,6 +43,7 @@
                 </div>
             </div>
             <ul class="hidden md:flex space-x-6">
+                <li><a href="./tokenomics.html" class="hover:text-indigo-500">Tokenomics</a></li>
                 <li><a href="./xspectar.html" class="hover:text-indigo-500">xSpectarverse</a></li>
                 <li><a href="./governance.html" class="hover:text-indigo-500">Governance</a></li>
                 <li><a href="./whitepaper.html" class="hover:text-indigo-500">Whitepaper</a></li>
@@ -52,17 +59,93 @@
         </script>
     </header>
 
-    <div class="h-20"></div>
+    <div class="h-10"></div>
     
     <!-- Minting Section -->
-    <section id="minting" class="bg-white p-8 mt-6 max-w-7xl mx-auto rounded-lg shadow-md text-center">
-        <h2 class="text-3xl font-bold mb-4">Mint up to 50 NFTs of a 10,000 collection with 200+ traits</h2>
-        <div class="w-120 h-160 bg-black text-white flex flex-col items-center p-4 rounded-lg shadow-md mx-auto mt-8">
-            <div class="w-full h-full flex items-center justify-center mb-4">
-                <img src="./public/minting-card-giff.gif" alt="NFT Preview" style="width: 450px; height: 450px;">
+    <section id="minting" class=" p-8 mt-6 max-w-7xl mx-auto rounded-lg  text-center">
+        <div class="w-100 flex-column d-reverse  justify-evenly">
+            <div class="w-1/3">
+                <section id="minting-card-column" class="bg- p-8 pt-0 mt-2 max-w-7xl mx-auto rounded-lg  text-center">
+
+                    <h2 class="text-3xl font-bold mb-4">Mint up to 50 NFTs of a 10,000 collection with 200+ traits</h2>
+                </section>
+                <div class="flex gap-10">
+
+                    <div class="w-60 h-50 bg-white text-black flex flex-col items-center justify-evenly px-2 pt-0 rounded-lg shadow-md mx-auto mt-1">
+                        <div class="w-full h-full flex items-center justify-center mb-2">
+                            <img src="./public/minting-card-giff.gif" alt="NFT Preview" style="width: 275px; ">
+                        </div>
+                        <a target="_blank" rel="noopener noreferrer" href="https://xrp.cafe/collection/xhares" class="bg-white text-black py-2 px-10 mt-auto rounded-lg font-extrabold text-xl">BUY</a>
+                    </div>
+                    <div class="w-60 h-80 bg-white text-black flex flex-col items-center p-4 rounded-lg shadow-md mx-auto mt-1">
+                        <div class="w-full h-full flex items-center justify-center mb-4">
+                            <img src="./public/minting-card-giff.gif" alt="NFT Preview" style="width: 225px; height: 225px;">
+                        </div>
+                        <a target="_blank" rel="noopener noreferrer" href="https://xrp.cafe/collection/xhares" class="bg-white text-black py-4 px-10 mt-auto rounded-lg font-extrabold text-xl">BUY</a>
+                    </div>         
+                </div>
+                
             </div>
-            <a target="_blank" rel="noopener noreferrer" href="https://xrp.cafe/collection/xhares" class="bg-white text-black py-8 px-20 mt-auto rounded-lg font-extrabold text-3xl">BUY</a>
+            <div class="right">
+                <section id="minting-card-column" class="bg- p-8 pt-0 pl-0 mt-0 max-w-7xl mx-auto rounded-lg  ">
+
+                    <h2 class="text-3xl font-bold mb-4  align-text-start ">Mint your traits</h2>
+                </section>
+                <section id="minting-data-table" class="bg-white  max-w-7xl shadow-md rounded-lg  text-center">
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Rarity</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dados 1</td>
+                                <td>Dados 2</td>
+                                <td>Dados 3</td>
+                                <td>Dados 3</td>
+                            </tr>
+                            <tr>
+                                <td>Dados 1</td>
+                                <td>Dados 2</td>
+                                <td>Dados 3</td>
+                                <td>Dados 3</td>
+                            </tr>
+                            <tr>
+                                <td>Dados 1</td>
+                                <td>Dados 2</td>
+                                <td>Dados 3</td>
+                                <td>Dados 3</td>
+                            </tr>
+                            <tr>
+                                <td>Dados 1</td>
+                                <td>Dados 2</td>
+                                <td>Dados 3</td>
+                                <td>Dados 3</td>
+                            </tr>
+                            <tr>
+                                <td>Dados 1</td>
+                                <td>Dados 2</td>
+                                <td>Dados 3</td>
+                                <td>Dados 3</td>
+                            </tr>
+                            <tr>
+                                <td>Dados 4</td>
+                                <td>Dados 5</td>
+                                <td>Dados 6</td>
+                                <td>Dados 6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </div>
+
+        
     </section>
 
     <!-- Footer Section -->
